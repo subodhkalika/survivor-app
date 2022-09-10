@@ -1,0 +1,41 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Survivor's R Us Client Information</title>
+  <link rel="stylesheet" href="index.css" />
+  <script type="text/javascript" src="js/view.js"></script>
+</head>
+<body>
+  <div class="mt-20 container">
+    <a href="index.html">Back</a>
+    <div class="page-title">
+      <h4>View Client Information</h4>
+    </div>
+    <hr>
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Contact</th>
+          <th>Suburb</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="tablebody">
+      </tbody>
+    </table>
+  </div>
+
+  <script type="text/javascript">
+    // var remote = require('electron').remote;
+    document.addEventListener('keydown', function (e) {
+      if (e.which === 220) {
+        remote.getCurrentWindow().webContents.openDevTools();
+      } else if (e.which === 116) {
+        location.reload();
+      }
+    });
+</script>
+</body>
+</html>

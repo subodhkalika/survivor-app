@@ -1,0 +1,128 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Survivor's R Us Client Information</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="mt-20 flex justify-between">
+      <div><a href="index.html">Back</a></div>
+      <div><input class="button-primary" value="Add" id="add" type="button"></div>
+    </div>
+    <div class="page-title">
+      <h4>Add client information</h4>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="four columns">
+        <label for="supportworker">Support Worker</label>
+        <input class="u-full-width" id="supportworker" type="text">
+      </div>
+      <div class="four columns">
+        <label for="firstname">Firstname</label>
+        <input class="u-full-width" id="firstname" type="text">
+      </div>
+      <div class="four columns">
+        <label for="lastname">Lastname</label>
+        <input class="u-full-width" id="lastname" type="text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="four columns">
+        <label for="gender">Prefered gender</label>
+        <input class="u-full-width" id="gender" type="text">
+      </div>
+      <div class="four columns">
+        <label for="address">Where are you residing? (Suburb)</label>
+        <input class="u-full-width" id="address" type="text">
+      </div>
+      <div class="four columns">
+        <label for="contact">Contact Number</label>
+        <input class="u-full-width" id="contact" type="text">
+      </div>
+    </div>
+    <div class="row">
+      <div class="four columns">
+        <label for="employment_status">Employment Status</label>
+        <input class="u-full-width" id="employment_status" type="text">
+      </div>
+      <div class="four columns">
+        <label for="living_arrangement">Current Living Arrangement</label>
+        <select class="u-full-width" id="living_arrangement">
+          <option selected disabled>--Select option--</option>
+          <option value="government">Government</option>
+          <option value="share">Share</option>
+          <option value="rental">Rental</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+      <div class="four columns">
+        <label for="indigenous_or_toress_stright_islander">Indigenous or islander</label>
+        <select class="u-full-width" id="indigenous_or_toress_stright_islander">
+            <option selected disabled>--Select option--</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+      </div>
+    </div>
+    <hr></hr>
+    <h5>Organisational Support (if any)</h5>
+    <div class="row">
+      <div class="four columns">
+        <label for="os_organisation">Organisation</label>
+        <input class="u-full-width" id="os_organisation" type="text">
+      </div>
+      <div class="four columns">
+        <label for="os_support_worker">Support Worker</label>
+        <input class="u-full-width" id="os_support_worker" type="text">
+      </div>
+      <div class="four columns">
+        <label for="os_email">Email</label>
+        <input class="u-full-width" id="os_email" type="text">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="four columns">
+        <label for="household_composition">Household Composition</label>
+        <input class="u-full-width" id="household_composition" type="text">
+      </div>
+      <div class="four columns">
+        <label for="current_circumstances">Current Circumstances</label>
+        <input class="u-full-width" id="current_circumstances" type="text">
+      </div>
+      <div class="four columns">
+        <label for="about_us">How did you hear about us?</label>
+        <input class="u-full-width" id="about_us" type="text">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="four columns">
+        <label for="assistance_required">Assistance required from survivors</label>
+        <input class="u-full-width" id="assistance_required" type="text">
+      </div>
+      <div class="four columns">
+        <label for="has_survivors_helped">Has survivors helped previously?</label>
+        <select class="u-full-width" id="has_survivors_helped">
+          <option selected disabled>--Select option--</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+      </select>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var remote = require('electron').remote;
+    document.addEventListener('keydown', function (e) {
+      if (e.which === 220) {
+        remote.getCurrentWindow().webContents.openDevTools();
+      } else if (e.which === 116) {
+        location.reload();
+      }
+    });
+</script>
+</body>
+</html>
